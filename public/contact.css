@@ -1,0 +1,80 @@
+* {
+  outline: none;
+}
+
+
+body {
+  font-family: 'Varela Round', sans-serif;
+  background-color: #f7f7f7;
+}
+
+.navbar {
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.09) 0 2px 0;
+  padding: 10px 16px;
+}
+
+
+.navbar .navbar-brand {
+  font-weight: bold;
+  letter-spacing: -1px;
+  font-size: 20px;
+  /* color: rgb(3, 3, 59); */
+  color: #03033b;
+}
+
+.navbar .navbar-brand:hover {
+  /* color: #9292c9; */
+  color: #435d7d;
+}
+
+
+.btn-rounded {
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  text-align: center;
+  padding: 0;
+  line-height: 25px;
+}
+
+.btn-rounded:hover {
+  color: #fff;
+}
+
+
+.card-title {
+  color: #fff;
+  background: #435d7d;
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+
+.index_page .card-title {
+  padding: 7px 13px !important;
+  /* padding: 0 !important; */
+}
+
+
+.footer {
+  background-color: #435d7d;
+  color: #f7f7f7;
+}
+
+.footer a {
+  color: #d9d9d9;
+}
+
+.btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+
+td a {
+  margin-right: 5px;
+}
