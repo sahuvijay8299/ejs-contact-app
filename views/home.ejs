@@ -1,148 +1,80 @@
 <%- include("partials/header.ejs") %>
 
+<main class="py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
 
-  <main class="py-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="card  index_page">
-            <!-- card header -->
-            <div class="card-header card-title">
-              <div class="d-flex align-items-center justify-content-between">
-                <h2>All contact</h2>
-                <a href="add-contact" class="btn btn-success"><i class="fa fa-plus-circle me-2"></i>Add New</a>
-              </div>
+        <div class="card index_page">
+
+          <!-- card header -->
+          <div class="card-header card-title">
+            <div class="d-flex align-items-center justify-content-between">
+              <h2>All contact</h2>
+
+              <a href="/add-contact" class="btn btn-success">
+                <i class="fa fa-plus-circle me-2"></i>
+                Add New
+              </a>
             </div>
+          </div>
 
-            <!-- card body -->
-            <div class="card-body">
-              <table class="table table-striped table-hover">
-                <thead>
-                  <tr>
-                    <th scope="col">Sr. No.</th>
-                    <th scope="col">First Name</th>
-                    <th scope="col">Last Name</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Phone</th>
-                    <th scope="col">Actions</th>
-                  </tr>
-                </thead>
+          <!-- card body -->
+          <div class="card-body">
 
-                <tbody>
+            <table class="table table-striped table-hover">
+
+              <thead>
+                <tr>
+                  <th>Sr. No.</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Email</th>
+                  <th>Phone</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+
+              <tbody>
+
+                <% contacts.forEach((contact,index)=>{ %>
+
                   <tr>
-                    <td>1</td>
-                    <td>Shurveer</td>
-                    <td>Singh</td>
-                    <td>Shurveer@test.com</td>
-                    <td>98989898</td>
+                    <td><%= index + 1 %></td>
+                    <td><%= contact.first_name %></td>
+                    <td><%= contact.last_name %></td>
+                    <td><%= contact.email %></td>
+                    <td><%= contact.phone %></td>
+
                     <td>
+
                       <a href="show-contact" class="btn btn-outline-info btn-sm btn-rounded" title="Show">
                         <i class="fa fa-eye"></i>
                       </a>
 
-                      <a href="update-contact" class="btn btn-outline-secondary btn-sm btn-rounded" title="Edit">
+                   <a href="/update-contact" class="btn btn-outline-secondary btn-sm btn-rounded" title="Edit">
                         <i class="fa fa-edit"></i>
                       </a>
 
-                      <a class="btn btn-outline-danger btn-sm btn-rounded" title="Delete">
+                      <a href="delete-contact"class="btn btn-outline-danger btn-sm btn-rounded" title="Delete">
                         <i class="fa fa-remove"></i>
                       </a>
+
                     </td>
                   </tr>
 
-                  <tr>
-                    <td>2</td>
-                    <td>Vijay</td>
-                    <td>Sahu</td>
-                    <td>Vijay@test.com</td>
-                    <td>45678908</td>
-                    <td>
-                      <a href="show-contact" class="btn btn-outline-info btn-sm btn-rounded" title="Show">
-                        <i class="fa fa-eye"></i>
-                      </a>
+                <% }) %>
 
-                      <a href="update-contact" class="btn btn-outline-secondary btn-sm btn-rounded" title="Edit">
-                        <i class="fa fa-edit"></i>
-                      </a>
+              </tbody>
 
-                      <a class="btn btn-outline-danger btn-sm btn-rounded" title="Delete">
-                        <i class="fa fa-remove"></i>
-                      </a>
-                    </td>
-                  </tr><tr>
-                    <td>3</td>
-                    <td>Rahul</td>
-                    <td>Koli</td>
-                    <td>Rahul@test.com</td>
-                    <td>98654898</td>
-                    <td>
-                      <a href="show-contact" class="btn btn-outline-info btn-sm btn-rounded" title="Show">
-                        <i class="fa fa-eye"></i>
-                      </a>
-
-                      <a href="update-contact" class="btn btn-outline-secondary btn-sm btn-rounded" title="Edit">
-                        <i class="fa fa-edit"></i>
-                      </a>
-
-                      <a class="btn btn-outline-danger btn-sm btn-rounded" title="Delete">
-                        <i class="fa fa-remove"></i>
-                      </a>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td>4</td>
-                    <td> Rishiraj</td>
-                    <td>rathore</td>
-                    <td>Rishiraj@test.com</td>
-                    <td>7654357</td>
-                    <td>
-                      <a href="show-contact" class="btn btn-outline-info btn-sm btn-rounded" title="Show">
-                        <i class="fa fa-eye"></i>
-                      </a>
-
-                      <a href="update-contact" class="btn btn-outline-secondary btn-sm btn-rounded" title="Edit">
-                        <i class="fa fa-edit"></i>
-                      </a>
-
-                      <a class="btn btn-outline-danger btn-sm btn-rounded" title="Delete">
-                        <i class="fa fa-remove"></i>
-                      </a>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td>5</td>
-                    <td>Manvendra</td>
-                    <td>Singh</td>
-                    <td>Manvendra@test.com</td>
-                    <td>76547898</td>
-                    <td>
-                      <a href="show-contact" class="btn btn-outline-info btn-sm btn-rounded" title="Show">
-                        <i class="fa fa-eye"></i>
-                      </a>
-
-                      <a href="update-contact" class="btn btn-outline-secondary btn-sm btn-rounded" title="Edit">
-                        <i class="fa fa-edit"></i>
-                      </a>
-
-                      <a class="btn btn-outline-danger btn-sm btn-rounded" title="Delete">
-                        <i class="fa fa-remove"></i>
-                      </a>
-                    </td>
-                  </tr>
-
-                </tbody>
-
-                <tfoot></tfoot>
-              </table>
-            </div>
+            </table>
 
           </div>
         </div>
+
       </div>
     </div>
-
-  </main>
+  </div>
+</main>
 
 <%- include("partials/footer.ejs") %>
