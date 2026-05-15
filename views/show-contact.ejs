@@ -1,72 +1,97 @@
 <%- include("partials/header.ejs") %>
 
+<main class="py-5">
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <div class="col-md-8">
 
-  <main class="py-5">
-    <div class="container">
-      <div class="row justify-content-md-center">
-        <div class="col-md-8">
-          <div class="card">
+        <div class="card">
 
-            <div class="card-header card-title">
-              <strong>Contact Details</strong>
-            </div>
+          <div class="card-header card-title">
+            <strong>Contact Details</strong>
+          </div>
 
-            <div class="card-body">
-              <div class="row">
-                <div class="col-md-12">
+          <div class="card-body">
 
-                  <div class="row my-3">
-                    <label for="first_name" class="col-md-3 col-form-label">First Name</label>
-                    <div class="col-md-9">
-                      <p class="form-control-plaintext text-muted">Shurveer</p>
-                    </div>
-                  </div>
+            <div class="row">
+              <div class="col-md-12">
 
-                  <div class="row my-3">
-                    <label for="last_name" class="col-md-3 col-form-label">Last Name</label>
-                    <div class="col-md-9">
-                      <p class="form-control-plaintext text-muted">Singh</p>
-                    </div>
-                  </div>
+                <div class="row my-3">
+                  <label class="col-md-3 col-form-label">First Name</label>
 
-                  <div class="row my-3">
-                    <label for="email" class="col-md-3 col-form-label">Email</label>
-                    <div class="col-md-9">
-                      <p class="form-control-plaintext text-muted">Shurveer@test.com</p>
-                    </div>
-                  </div>
-
-                  <div class="row my-3">
-                    <label for="phone" class="col-md-3 col-form-label">Phone</label>
-                    <div class="col-md-9">
-                      <p class="form-control-plaintext text-muted">98989898</p>
-                    </div>
-                  </div>
-
-                  <div class="row my-3">
-                    <label for="name" class="col-md-3 col-form-label">Address</label>
-                    <div class="col-md-9">
-                      <p class="form-control-plaintext text-muted">Udaipur</p>
-                    </div>
-                  </div>
-
-                  <hr>
-                  <div class="row mb-0">
-                    <div class="col-md-9 offset-md-3">
-                      <button type="submit" class="btn btn-primary">Save</button>
-                      <a href="/" class="btn btn-outline-secondary">Cancel</a>
-                    </div>
+                  <div class="col-md-9">
+                    <p class="form-control-plaintext text-muted">
+                      <%= contact.first_name %>
+                    </p>
                   </div>
                 </div>
+
+                <div class="row my-3">
+                  <label class="col-md-3 col-form-label">Last Name</label>
+
+                  <div class="col-md-9">
+                    <p class="form-control-plaintext text-muted">
+                      <%= contact.last_name %>
+                    </p>
+                  </div>
+                </div>
+
+                <div class="row my-3">
+                  <label class="col-md-3 col-form-label">Email</label>
+
+                  <div class="col-md-9">
+                    <p class="form-control-plaintext text-muted">
+                      <%= contact.email %>
+                    </p>
+                  </div>
+                </div>
+
+                <div class="row my-3">
+                  <label class="col-md-3 col-form-label">Phone</label>
+
+                  <div class="col-md-9">
+                    <p class="form-control-plaintext text-muted">
+                      <%= contact.phone %>
+                    </p>
+                  </div>
+                </div>
+
+                <div class="row my-3">
+                  <label class="col-md-3 col-form-label">Address</label>
+
+                  <div class="col-md-9">
+                    <p class="form-control-plaintext text-muted">
+                      <%= contact.address %>
+                    </p>
+                  </div>
+                </div>
+
+                <hr>
+
+                <div class="row mb-0">
+                  <div class="col-md-9 offset-md-3">
+
+                    <a href="/" class="btn btn-primary">
+                      Back
+                    </a>
+
+                    <a href="/" class="btn btn-outline-secondary">
+                      Cancel
+                    </a>
+
+                  </div>
+                </div>
+
               </div>
             </div>
 
-
           </div>
+
         </div>
+
       </div>
     </div>
-  </main>
-
+  </div>
+</main>
 
 <%- include("partials/footer.ejs") %>
